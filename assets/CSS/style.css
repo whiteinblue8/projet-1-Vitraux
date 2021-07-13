@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto&display=swap');
-
-
+@font-face {
+    font-family: "FrederickatheGreat-Regular";
+    src: url("../fonts/FrederickatheGreat-Regular.ttf");
+}
 
 * {
     padding: 0;
@@ -15,7 +17,6 @@
 
 h2:hover {
     /* survol*/
-    /* background-color: #81B3D4; */
     color: #08dd3d;
 }
 
@@ -39,8 +40,6 @@ body {
     height: 60%;
     flex-direction: column;
     padding: 30px;
-
-
 }
 
 .textpresentation {
@@ -74,21 +73,10 @@ h2 {
     font-size: 2rem;
     font-family: 'Fredericka the Great', cursive;
     font-weight: lighter;
-
 }
 
 
-@font-face {
-    font-family: "FrederickatheGreat-Regular";
-    src: url("../fonts/FrederickatheGreat-Regular.ttf");
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
+/* ------------------------------HEADER---------------------------- */
 header {
     height: 384px;
     display: flex;
@@ -99,7 +87,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+/* div #bandeau contient #logo & h1 */
 #bandeau {
     display: flex;
     /* border: 2px solid #000000; */
@@ -116,18 +104,21 @@ header {
 }
 
 h1 {
-    justify-content: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: "FrederickatheGreat-Regular", Arial;
     font-weight: lighter;
     height: 86px;
-    line-height: 86px;
     width: auto;
     color: #690426;
-    font-size: 18px;
-    padding-left: 30px;
+    /* font-size: 25px; */
+    font-size: 1.5rem;
+    padding-left: 30px; 
+    flex-wrap: wrap;
 }
-
+/* fin du bandeau */
+/* la nav #navigation contient les boutons .atelier, .realisations, .contact  */
 #navigation {
     display: grid;
     grid-template-columns: 50vw;
@@ -136,7 +127,6 @@ h1 {
         "Atelier"
         "Réalisations"
         "Contact";
-    /* utilisation d'un background color couplé à un gap pour avoir les lignes rouges */
     grid-gap: 29px;
     gap: 50px;
 }
@@ -148,8 +138,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 35px;
-    border-radius: 30px;
+    font-size: 2rem;
+    border-radius: 3.5vh;
     border: 2px solid #000000;
 }
 
@@ -171,6 +161,12 @@ h1 {
     grid-area: Contact;
 }
 
+.nav_boutons {
+    text-decoration: none;
+    color: #000000;
+}
+/* fin de nav */
+/* début du footer */
 #footer {
     display: grid;
     grid-template-columns: 35vw 60vw;
@@ -180,9 +176,6 @@ h1 {
         "Adresse Droits"
         "Adresse Mentions"
         "Adresse Copyright";
-    /* utilisation d'un background color couplé à un gap pour avoir les lignes rouges */
-    /* grid-gap: 29px;
-    gap: 50px; */
     background-color: #3a358a;
 }
 
@@ -194,8 +187,7 @@ h1 {
 .droits,
 .mentions,
 .copyright {
-    font-size: 10px;
-    justify-content: center;
+    font-size: 0.5rem;
     color: #ffffff;
 }
 
@@ -221,11 +213,6 @@ h1 {
 
 .copyright {
     grid-area: Copyright;
-}
-
-.nav_boutons {
-    text-decoration: none;
-    color: #000000;
 }
 
 /* pseudo classe pour une action au survol (hover) */
@@ -291,7 +278,6 @@ h1 {
 
     .textpresentation {
         display: flex;
-
     }
 
     .box {
@@ -306,7 +292,6 @@ h1 {
         flex-direction: column;
         width: 50%;
         height: 60%;
-
         padding: 30px;
     }
 
