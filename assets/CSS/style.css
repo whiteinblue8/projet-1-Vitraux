@@ -109,19 +109,19 @@ h1 {
     justify-content: center;
     font-family: "FrederickatheGreat-Regular", Arial;
     font-weight: lighter;
-    height: 86px;
+    height: 5.5rem;
     width: auto;
     color: #690426;
     /* font-size: 25px; */
     font-size: 1.5rem;
-    padding-left: 30px; 
+    padding-left: 1rem; 
     flex-wrap: wrap;
 }
 /* fin du bandeau */
 /* la nav #navigation contient les boutons .atelier, .realisations, .contact  */
 #navigation {
     display: grid;
-    grid-template-columns: 50vw;
+    grid-template-columns: 60vw;
     grid-template-rows: 7vh 7vh 7vh;
     grid-template-areas:
         "Atelier"
@@ -169,7 +169,7 @@ h1 {
 /* début du footer */
 #footer {
     display: grid;
-    grid-template-columns: 35vw 60vw;
+    grid-template-columns: 34vw 64vw;
     justify-content: center;
     grid-template-rows: 7vh 7vh 7vh;
     grid-template-areas:
@@ -187,7 +187,7 @@ h1 {
 .droits,
 .mentions,
 .copyright {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     color: #ffffff;
 }
 
