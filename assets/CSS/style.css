@@ -8,19 +8,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 .box a {
     text-decoration: none;
 }
+
 h2:hover {
     /* survol*/
     /* background-color: #81B3D4; */
     color: #08dd3d;
 }
+
 body {
     background-color: #3a358a;
 }
 
-.presentation{
+.presentation {
     display: flex;
     padding: 20px;
     font-size: 1rem;
@@ -36,8 +39,8 @@ body {
     height: 60%;
     flex-direction: column;
     padding: 30px;
-    
-    
+
+
 }
 
 .textpresentation {
@@ -47,7 +50,7 @@ body {
     color: #ffffff;
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 .box {
@@ -55,8 +58,9 @@ body {
     width: 100%;
     height: 60%;
     flex-direction: column;
-    padding: 30px;  
+    padding: 30px;
 }
+
 img {
     width: 100%;
     height: 60%;
@@ -70,13 +74,209 @@ h2 {
     font-size: 2rem;
     font-family: 'Fredericka the Great', cursive;
     font-weight: lighter;
-    
+
 }
 
 
-@media screen and (min-width: 480px) {
+@font-face {
+    font-family: "FrederickatheGreat-Regular";
+    src: url("../fonts/FrederickatheGreat-Regular.ttf");
+}
 
-    .presentation{
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    height: 384px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url("../images/colombe_eglise.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bandeau {
+    display: flex;
+    /* border: 2px solid #000000; */
+    height: 86px;
+    background-size: cover;
+    width: 100%;
+    background-color: #f8f3f3;
+}
+
+#logo {
+    justify-content: flex-start;
+    width: auto;
+    height: 86px;
+}
+
+h1 {
+    justify-content: center;
+    display: flex;
+    font-family: "FrederickatheGreat-Regular", Arial;
+    font-weight: lighter;
+    height: 86px;
+    line-height: 86px;
+    width: auto;
+    color: #690426;
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+#navigation {
+    display: grid;
+    grid-template-columns: 50vw;
+    grid-template-rows: 7vh 7vh 7vh;
+    grid-template-areas:
+        "Atelier"
+        "Réalisations"
+        "Contact";
+    /* utilisation d'un background color couplé à un gap pour avoir les lignes rouges */
+    grid-gap: 29px;
+    gap: 50px;
+}
+
+.atelier,
+.realisations,
+.contact {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    border-radius: 30px;
+    border: 2px solid #000000;
+}
+
+.atelier:hover,
+.realisations:hover,
+.contact:hover {
+    background-color: #a36161;
+}
+
+.atelier {
+    grid-area: Atelier;
+}
+
+.realisations {
+    grid-area: Réalisations;
+}
+
+.contact {
+    grid-area: Contact;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 35vw 60vw;
+    justify-content: center;
+    grid-template-rows: 7vh 7vh 7vh;
+    grid-template-areas:
+        "Adresse Droits"
+        "Adresse Mentions"
+        "Adresse Copyright";
+    /* utilisation d'un background color couplé à un gap pour avoir les lignes rouges */
+    /* grid-gap: 29px;
+    gap: 50px; */
+    background-color: #3a358a;
+}
+
+#mention {
+    color: #ffffff;
+}
+
+.adresse,
+.droits,
+.mentions,
+.copyright {
+    font-size: 10px;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.droits,
+.mentions,
+.copyright {
+    line-height: 7vh;
+}
+
+.adresse {
+    grid-area: Adresse;
+    line-height: 3.58vh;
+    margin-top: 10px;
+}
+
+.droits {
+    grid-area: Droits;
+}
+
+.mentions {
+    grid-area: Mentions;
+}
+
+.copyright {
+    grid-area: Copyright;
+}
+
+.nav_boutons {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* pseudo classe pour une action au survol (hover) */
+.nav_boutons:hover {
+    color: #000000;
+}
+
+@media screen and (min-width: 480px) {
+    #bandeau {
+        height: 156px;
+    }
+
+    #logo {
+        width: auto;
+        height: 156px;
+    }
+
+    h1 {
+        height: 156px;
+        line-height: 156px;
+        width: 70.5vw;
+        color: #690426;
+        font-size: 50px;
+        padding-left: none;
+    }
+
+    #navigation {
+        display: grid;
+        grid-template-columns: 25vw 25vw 25vw;
+        grid-template-rows: 12vh;
+        grid-template-areas:
+            "Atelier Réalisations Contact";
+        justify-content: space-around;
+        grid-gap: 60px;
+    }
+
+    .atelier,
+    .realisations,
+    .contact {
+        border-radius: 65px;
+        font-size: 50px;
+    }
+
+    .adresse,
+    .droits,
+    .mentions,
+    .copyright {
+        font-size: 20px;
+    }
+
+    .presentation {
         padding: 100px;
         font-size: 3rem;
     }
@@ -88,34 +288,35 @@ h2 {
         align-items: center;
         flex-direction: row;
     }
-.textpresentation{
-    display: flex;
-    
-}
 
-.box {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-}
+    .textpresentation {
+        display: flex;
+
+    }
+
+    .box {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+
     .box1 {
         display: flex;
         flex-direction: column;
         width: 50%;
         height: 60%;
 
-        padding: 30px;   
+        padding: 30px;
     }
+
     .box2 {
         display: flex;
         flex-direction: column;
         width: 50%;
         height: 60%;
 
-        padding: 30px;   
+        padding: 30px;
     }
 
 }
-
-
